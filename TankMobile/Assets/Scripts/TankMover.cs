@@ -19,12 +19,9 @@ public class TankMover : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
     }
-    private void Update()
-    {
-        Move();
-    }
     private void FixedUpdate()
     {
+        Move();
         if (pointerDown)
         {
             rb.velocity = Vector3.zero;

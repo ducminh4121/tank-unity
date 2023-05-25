@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1929437802831485600}
   - component: {fileID: 1929437802831485602}
   - component: {fileID: 1929437802831485603}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1170774633
-  m_SortingLayer: 9
+  m_SortingLayer: 8
   m_SortingOrder: 2
   m_Sprite: {fileID: -251821068, guid: c6326d09c0676431e8bda925084815d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6886f1b7528ce479696eabcb2dc6b538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretData: {fileID: 11400000, guid: 4d615b9f8e9c44d73902bbc66224ddea, type: 2}
+  turretData: {fileID: 11400000, guid: 6e58684499f94498c8a1fbb4e999a682, type: 2}
   turretBarrels:
   - {fileID: 1929437804412610360}
   pathCol: {fileID: 1929437804700745100}
@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1929437802867100961}
   - component: {fileID: 1929437802867100960}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Track_A (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1170774633
-  m_SortingLayer: 9
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -937485701, guid: c6326d09c0676431e8bda925084815d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -244,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1929437803018871678}
   - component: {fileID: 1929437803018871617}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankTurretParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,6 +296,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1929437803190083572}
   - component: {fileID: 1929437803190083575}
+  - component: {fileID: 1267413503674308205}
+  - component: {fileID: 6210939599606024780}
   m_Layer: 0
   m_Name: RayEnemy2
   m_TagString: Untagged
@@ -333,6 +335,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1146efa3318934020bf15bff9eff2146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1267413503674308205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929437803190083573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bda496e6c7a7547caad722694a492e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6210939599606024780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929437803190083573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160910b83cd4d4c16a23875f6316be32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addCoin: 150
 --- !u!1 &1929437803754168248
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1929437803754168251}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Track
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1929437803802976021}
   - component: {fileID: 1929437803802976020}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Track_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,7 +464,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1170774633
-  m_SortingLayer: 9
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -937485701, guid: c6326d09c0676431e8bda925084815d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -460,7 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1929437803807212926}
   - component: {fileID: 1929437803807212865}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +548,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1170774633
-  m_SortingLayer: 9
+  m_SortingLayer: 8
   m_SortingOrder: 1
   m_Sprite: {fileID: -939532779, guid: c6326d09c0676431e8bda925084815d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -545,7 +572,7 @@ GameObject:
   - component: {fileID: 1929437804000587159}
   - component: {fileID: 1929437804000587161}
   - component: {fileID: 1929437804000587158}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DeathFeedBack (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,7 +630,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1929437804412610360}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -638,9 +665,9 @@ GameObject:
   - component: {fileID: 1929437804443495179}
   - component: {fileID: 1929437804443495180}
   - component: {fileID: 1929437804443495183}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ray_Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -766,6 +793,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1267413503674308205}
+        m_TargetAssemblyTypeName: Mana, Assembly-CSharp
+        m_MethodName: ManaOnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6210939599606024780}
+        m_TargetAssemblyTypeName: AddCoin, Assembly-CSharp
+        m_MethodName: AddCoinOnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHealthChange:
     m_PersistentCalls:
       m_Calls:
@@ -873,7 +924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3562598474232176604, guid: 24d8cbb6a7bb04a3da0308e655df9185, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5623276271987655774, guid: 24d8cbb6a7bb04a3da0308e655df9185, type: 3}
       propertyPath: m_RootOrder
@@ -944,7 +995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4653099625147957232, guid: 6b3f63750e47a49dea1754e66e3a537e, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4653099625147957232, guid: 6b3f63750e47a49dea1754e66e3a537e, type: 3}
       propertyPath: m_IsActive
@@ -1223,7 +1274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4436255482998558729, guid: d05bcb0d70d014bce82df9c2fdd3115c, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4436255482998558730, guid: d05bcb0d70d014bce82df9c2fdd3115c, type: 3}
       propertyPath: m_RootOrder
@@ -1243,19 +1294,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4436255482998558730, guid: d05bcb0d70d014bce82df9c2fdd3115c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4436255482998558730, guid: d05bcb0d70d014bce82df9c2fdd3115c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4436255482998558730, guid: d05bcb0d70d014bce82df9c2fdd3115c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4436255482998558730, guid: d05bcb0d70d014bce82df9c2fdd3115c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4436255482998558730, guid: d05bcb0d70d014bce82df9c2fdd3115c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

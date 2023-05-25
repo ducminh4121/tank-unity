@@ -40,8 +40,7 @@ public class AEnemyAI : MonoBehaviour
         if (distance <= nextWPdistance)
         {
             currentWP++;
-        }
-        
+        }   
     }
     void OnPathComplete(Path p)
     {

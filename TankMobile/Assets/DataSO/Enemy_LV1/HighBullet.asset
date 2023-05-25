@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f740835ddab3d485998d767576ad41ca, type: 3}
   m_Name: HighBullet
   m_EditorClassIdentifier: 
-  speed: 1.5
-  damage: 150
-  maxDistance: 10
+  speed: 2.4
+  damage: 300
+  maxDistance: 12

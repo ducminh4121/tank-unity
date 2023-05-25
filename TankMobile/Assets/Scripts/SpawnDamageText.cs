@@ -29,5 +29,4 @@ public class SpawnDamageText : MonoBehaviour
         text.transform.localRotation = pos.rotation;
         text.GetComponentInChildren<TMP_Text>().text = damageText;
     }
-    
 }

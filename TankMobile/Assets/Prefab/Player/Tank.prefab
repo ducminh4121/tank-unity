@@ -648,7 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6b87f12685b04901bdd9fd6a7624734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 1
+  maxSpeed: 1.75
   joystick: {fileID: 0}
   OnMove:
     m_PersistentCalls:
@@ -679,6 +679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 100
   health: 0
+  hpText: {fileID: 0}
   OnDead:
     m_PersistentCalls:
       m_Calls:
@@ -1189,7 +1190,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1813089025
-  m_SortingLayer: 10
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

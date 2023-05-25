@@ -83,9 +83,10 @@ GameObject:
   - component: {fileID: 3057642044684418848}
   - component: {fileID: 3670213585341360844}
   - component: {fileID: 3670213585341360883}
+  - component: {fileID: 2810465031274969107}
   m_Layer: 6
   m_Name: A_Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +99,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244104644414501314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.138326, y: 2.0720675, z: 0.014433861}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -151,7 +152,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1170774633
-  m_SortingLayer: 9
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -1392545987, guid: 6c1ba4edfc88f4cf89a9a78dab5d302b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -230,12 +231,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec8cbb6788d9244b8baf9bddb2941bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkRadius: 15
+  checkRadius: 18
   playerMask:
     serializedVersion: 2
     m_Bits: 128
   col: {fileID: 0}
   delay: 0
+  rayAim: 0
 --- !u!114 &1244104644414501324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +283,30 @@ MonoBehaviour:
       - m_Target: {fileID: 1244104645267511197}
         m_TargetAssemblyTypeName: DestroyUtil, Assembly-CSharp
         m_MethodName: DestroyHelper
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8379273189630657696}
+        m_TargetAssemblyTypeName: Mana, Assembly-CSharp
+        m_MethodName: ManaOnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6215116865605575822}
+        m_TargetAssemblyTypeName: AddCoin, Assembly-CSharp
+        m_MethodName: AddCoinOnDeath
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -388,7 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3363ae83993c543f6b9a9d4504991412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 1.2
   nextWPdistance: 8
 --- !u!114 &3670213585341360844
 MonoBehaviour:
@@ -402,11 +428,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6886f1b7528ce479696eabcb2dc6b538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretData: {fileID: 11400000, guid: 821c7f5b3557044a8baa91aad598dcb6, type: 2}
+  turretData: {fileID: 11400000, guid: 6e58684499f94498c8a1fbb4e999a682, type: 2}
   turretBarrels:
   - {fileID: 3670213584141113862}
+  pathCol: {fileID: 0}
   bulletPoolCount: 10
-  distance: 10
+  distance: 15
   OnShoot:
     m_PersistentCalls:
       m_Calls:
@@ -450,6 +477,27 @@ MonoBehaviour:
   poolSize: 10
   spawnedObjectsParent: {fileID: 0}
   alwaysDestroy: 0
+--- !u!50 &2810465031274969107
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244104644414501314}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1244104644702190017
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +568,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1244104645267511196}
   - component: {fileID: 1244104645267511197}
+  - component: {fileID: 8379273189630657696}
+  - component: {fileID: 6215116865605575822}
   m_Layer: 6
   m_Name: Patrol_Enemy1
   m_TagString: Untagged
@@ -534,8 +584,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244104645267511195}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.015755, y: 0.6476612, z: -6.176053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -555,6 +605,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1146efa3318934020bf15bff9eff2146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8379273189630657696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244104645267511195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bda496e6c7a7547caad722694a492e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6215116865605575822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244104645267511195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160910b83cd4d4c16a23875f6316be32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addCoin: 100
 --- !u!1 &3670213584141113863
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +654,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3670213584141113863}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.71, y: 0, z: 0}
+  m_LocalPosition: {x: 0.807, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -846,11 +921,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6800647485973905508, guid: 6b3f63750e47a49dea1754e66e3a537e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.75
+      value: 0.791
       objectReference: {fileID: 0}
     - target: {fileID: 6800647485973905508, guid: 6b3f63750e47a49dea1754e66e3a537e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6800647485973905508, guid: 6b3f63750e47a49dea1754e66e3a537e, type: 3}
       propertyPath: m_LocalPosition.z

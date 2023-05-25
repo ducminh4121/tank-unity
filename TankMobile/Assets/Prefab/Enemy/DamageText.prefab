@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 954ede2ed1abd4a40a83f39dac7d35cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDisable: 0.5
+  timeToDisable: 0.8
 --- !u!1001 &9123109110438642379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,7 +55,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 807230790712978577, guid: bf1a525a9ce334cad85dcfa659d154d2, type: 3}
       propertyPath: m_SortingLayer
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 807230790712978577, guid: bf1a525a9ce334cad85dcfa659d154d2, type: 3}
       propertyPath: m_SortingLayerID
